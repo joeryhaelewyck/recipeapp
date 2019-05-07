@@ -9,15 +9,15 @@ export class Recipe {
     const rec = new Recipe(json.name, json.ingredients, json.dateAdded);
     return rec;
   }
-  // [...] other getters
+
   get name(): string {
     return this._name;
   }
-  get ingredients(): Array<string>{
-    return this._ingredients;
-  }
-  get dateAdded(): Date{
+  get dateAdded(): Date {
     return this._dateAdded;
+  }
+  get ingredients(): string[] {
+    return this._ingredients;
   }
   addIngredient(name: string, amount?: number, unit?: string) {
     this._ingredients.push(`${amount || 1} ${unit || ''} ${name}`);
