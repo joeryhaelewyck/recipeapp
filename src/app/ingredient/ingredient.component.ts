@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class IngredientComponent implements OnInit {
   @Input() name: string;
+  @Input() dateAdded: Date;
   constructor() { }
 
   ngOnInit() {
